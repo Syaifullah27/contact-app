@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> <%= title %></title>
+</head>
+<body>
+    <br>
+    <h1>Web Server Node JS</h1>
+    <p>Welcome to my site...</p>
+    <br>
+<hr>
+    <br>
+    <h2>Hello I am <%= nama %></h2>
+    <br>
+    <h4>--Daftar Mahasiswa--</h4>
+    <% if(mahasiswa.length < 1) { %>
+    <p>DATA MAHASISWA MASIH KOSONG!</p>
+    <% } else { %>
+        <% mahasiswa.forEach(mhs => { %>
+         <ul>
+            <li>Nama : <%= mhs.nama %></li>
+            <li>Email : <%= mhs.email %></li>
+         </ul>
+        <% }) %>
+        <% } %>
+</body>
+</html>
